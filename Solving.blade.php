@@ -1,5 +1,4 @@
-// Multiple input and Two array insert at a same time
-
+// Multiple input and Two array insert at a same time //
         $test = null;
         $mi = new MultipleIterator();
         $mi->attachIterator(new ArrayIterator($request->value));
@@ -13,3 +12,4 @@
                 'created_at' => Carbon::now(),
             ]);
         }
+// Multiple input and Two array insert at a same time //
