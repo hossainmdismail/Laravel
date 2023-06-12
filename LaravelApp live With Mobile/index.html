@@ -1,0 +1,31 @@
+  
+
+
+<h3>
+    To preview a Laravel project on a mobile device, you need to follow these general steps:
+</h3>
+  
+  <ul>
+    <li>Ensure that your mobile device is connected to the same network as your development machine.
+    </li>
+    <li>Determine the IP address of your development machine. You can usually find it by checking the network settings on your computer or using command line tools like ipconfig (Windows) or ifconfig (Linux/macOS).
+    </li>
+    <li>Update the Laravel configuration to allow access from devices other than your development machine. Open the config/app.php file in your Laravel project and modify the 'url' option to use the IP address of your development machine. For example:
+   
+            'url' => 'http://your-ip-address',
+    </li>
+    <li>Start the Laravel development server by running the following command in your project's root directory:
+            
+            php artisan serve --host=0.0.0.0 --port=8000
+            
+            The --host=0.0.0.0 flag allows connections from any IP address, and the --port=8000 flag sets the port number (you can change it if needed).
+    </li>
+    <li>Check that your Laravel project is running correctly by accessing http://your-ip-address:8000 in a web browser on your development machine. Ensure that the site is functioning as expected.
+    </li>
+    <li>On your mobile device, open a web browser and enter the IP address and port number used in Step 4. For example, http://your-ip-address:8000.
+    </li>
+    <li>You should now be able to preview your Laravel project on your mobile device. The mobile browser will render the project just like any other website.
+
+            Note: Make sure that your mobile device and development machine are connected to the same network for this setup to work. Additionally, if you're using a firewall or any security software, you may need to configure it to allow incoming connections on the specified port.
+    </li>
+  </ul>
