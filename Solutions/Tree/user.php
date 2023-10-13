@@ -101,7 +101,7 @@ class User extends Authenticatable
         if ($child === null) {
             return $this;
         }
-        if ($child->left_child_id === null && $child->right_child_id === null) {
+        if ($child->left_child_id == null || $child->right_child_id == null) {
             return $child;
         }
         return $child->findLastUser($child->right_child_id);
